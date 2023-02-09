@@ -5,32 +5,32 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [Header("Set Timer Here, Set in (second)")]
-    public float timeLimit = 30.0f; // The time limit in seconds
+    public float timeLimit = 30.0f;
 
-    private float timeRemaining; // The time remaining
+    private float timeRemaining;
     [Header("Please Ignore")]
-    public Text timerText; // The UI text component to display the timer
+    public Text timerText;
+    [HideInInspector] public bool stopTimer;
 
 
     private void Start()
     {
-        timeRemaining = timeLimit; // Initialize the time remaining
+        timeRemaining = timeLimit;
+        stopTimer = false;
     }
 
     private void Update()
     {
-        // Decrement the time remaining by the time elapsed since the last frame
-        timeRemaining -= Time.deltaTime;
-
-        // Convert the time remaining into minutes and seconds
         int minutes = Mathf.FloorToInt(timeRemaining / 60.0f);
         int seconds = Mathf.FloorToInt(timeRemaining % 60.0f);
 
-        // Update the timer text
-        timerText.text = string.Format("{00:00}:{01:00}", minutes, seconds);
+        if (!stopTimer)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
 
-        // Check if the timer has reached zero
-        if (timeRemaining <= 0)
+        timerText.text = string.Format("{00:00}:{01:00}", minutes, seconds);
+        if (timeRemaining <= 0 )
         {
             timerText.text = string.Format("{00:00}:{01:00}", 0, 0);
             HealthBar.currentHealth = 0;

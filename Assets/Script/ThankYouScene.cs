@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class ThankYouScene : MonoBehaviour
 {
     public GameObject thankYou;
+    public ToTheNextScene clickScene;
 
     private void Update()
     {
         if (thankYou.GetComponent<AnswerSlot>().correct)
         {
-            SceneManager.LoadScene("ThankYouScene");
+            clickScene.onClick();
+            clickScene.SceneName = "ThankYouScene";
             HealthBar.currentHealth = 3;
         }
     }

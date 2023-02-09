@@ -44,11 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981fde72a6782e54daac29dab9490ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameRoomSceneName:
-  - Mission1
-  - Mission2
-  - Mission3
-  - Mission4
-  - Mission5
-  - LastMission
-  - FinalRoom
+  gameRoomSceneName: 
+  RoomGameObject: {fileID: 0}
+  clickScene: {fileID: 143715072784274846, guid: 36fbfeba0f561c149afa350557d964eb, type: 3}

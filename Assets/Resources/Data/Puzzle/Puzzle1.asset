@@ -17,130 +17,126 @@ MonoBehaviour:
   Board:
   - size: 10
     Row:
-    - G
-    - D
-    - V
-    - Q
-    - T
-    - H
-    - H
-    - X
-    - J
     - N
-  - size: 10
-    Row:
-    - O
-    - U
-    - M
-    - R
-    - V
-    - J
-    - Q
-    - X
-    - I
-    - W
-  - size: 10
-    Row:
-    - K
-    - D
-    - U
-    - O
+    - L
     - Y
-    - M
-    - L
-    - G
+    - V
+    - X
     - J
-    - K
-  - size: 10
-    Row:
+    - V
     - U
-    - C
-    - A
-    - T
-    - D
-    - H
-    - V
-    - R
-    - V
+    - S
     - I
   - size: 10
     Row:
-    - P
-    - M
-    - X
-    - X
+    - D
+    - N
+    - T
+    - T
+    - S
     - O
     - U
+    - T
+    - H
+    - H
+  - size: 10
+    Row:
+    - W
+    - Q
+    - O
+    - K
+    - J
+    - E
+    - Q
+    - E
+    - E
+    - G
+  - size: 10
+    Row:
+    - B
+    - A
+    - O
+    - K
+    - N
+    - Q
+    - J
+    - D
+    - Y
+    - N
+  - size: 10
+    Row:
+    - J
+    - L
+    - A
+    - Y
+    - O
+    - X
+    - N
+    - X
+    - A
+    - X
+  - size: 10
+    Row:
+    - Q
+    - P
+    - E
+    - T
+    - R
+    - U
+    - A
+    - G
+    - A
+    - F
+  - size: 10
+    Row:
+    - C
+    - K
+    - M
+    - R
+    - T
+    - S
+    - N
+    - F
+    - B
+    - F
+  - size: 10
+    Row:
     - Q
     - B
-    - N
-    - C
-  - size: 10
-    Row:
-    - B
-    - H
-    - G
-    - N
-    - G
-    - N
     - D
-    - H
-    - T
     - M
-  - size: 10
-    Row:
-    - W
-    - B
-    - I
-    - A
-    - A
+    - H
+    - S
     - T
-    - J
-    - W
-    - J
-    - O
+    - L
+    - C
+    - U
   - size: 10
     Row:
     - R
-    - A
-    - S
-    - W
-    - E
-    - W
     - G
-    - I
-    - I
-    - D
-  - size: 10
-    Row:
-    - C
-    - C
-    - J
-    - J
-    - I
-    - D
-    - E
-    - T
-    - W
-    - W
-  - size: 10
-    Row:
-    - N
-    - Z
-    - G
-    - S
-    - P
-    - G
-    - L
     - H
-    - P
-    - O
+    - J
+    - E
+    - W
+    - J
+    - J
+    - I
+    - T
+  - size: 10
+    Row:
+    - A
+    - Y
+    - G
+    - F
+    - T
+    - S
+    - I
+    - Z
+    - Q
+    - X
   SearchWords:
-  - word: GOKU
-    questions: WHAT IS THE TEST1
-  - word: CAT
-    questions: WHAT IS THE TEST2
-  - word: DOG
-    questions: WHAT IS THE TEST3
-  - word: HUNT
-    questions: WHAT IS THE TEST4
+  - word: NORTH
+    questions: MAGNET NORTH
+  - word: SOUTH
+    questions: MAGNET SOUTH

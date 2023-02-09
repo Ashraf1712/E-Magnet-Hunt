@@ -5,6 +5,7 @@ public class PointAndClick : MonoBehaviour
 {
     [SerializeField] string gameRoomSceneName;
     [SerializeField] GameObject RoomGameObject;
+    public ToTheNextScene clickScene;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -16,9 +17,10 @@ public class PointAndClick : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == RoomGameObject.gameObject.name)
                 {
-                    SceneManager.LoadScene(gameRoomSceneName);
+                    //SceneManager.LoadScene(gameRoomSceneName);
+                    clickScene.SceneName = gameRoomSceneName;
+                    clickScene.onClick();
                 }
-
             }
         }
     }

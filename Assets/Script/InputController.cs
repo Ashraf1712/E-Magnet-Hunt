@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour
     public GameObject safeQuestion;
     public GameObject closedSafe;
     public GameObject openedSafe;
+    public Timer timer;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class InputController : MonoBehaviour
             safeQuestion.SetActive(false);
             closedSafe.SetActive(false);
             openedSafe.SetActive(true);
+            timer.stopTimer = true;
         }
         else
         {

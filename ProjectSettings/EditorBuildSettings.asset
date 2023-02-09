@@ -33,22 +33,22 @@ EditorBuildSettings:
     path: Assets/Scenes/GameRoom/GameRoom6.unity
     guid: 5fa6e5f46fef2ae438f4b3825dc91998
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/Mission1.unity
+    path: Assets/Scenes/MissionRoom/Mission1.unity
     guid: f4c6bb58ff21483469d5a3abfea7d55a
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/Mission2.unity
+    path: Assets/Scenes/MissionRoom/Mission2.unity
     guid: 41d0894fa556b7c4081e3ad8a4852048
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/Mission3.unity
+    path: Assets/Scenes/MissionRoom/Mission3.unity
     guid: ba614a477a289cb4a8e4c75e6e7ea02b
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/Mission4.unity
+    path: Assets/Scenes/MissionRoom/Mission4.unity
     guid: eb468eb578dfe6b428400c8ca7cf7ee2
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/Mission5.unity
+    path: Assets/Scenes/MissionRoom/Mission5.unity
     guid: 545abacd6b31b6e4893f5687aaa6637b
   - enabled: 1
-    path: Assets/Scenes/QuestionRoom/LastMission.unity
+    path: Assets/Scenes/MissionRoom/LastMission.unity
     guid: 4aa528f531ae9a341a3a8a2c57031ff5
   - enabled: 1
     path: Assets/Scenes/Final/FinalRoom.unity

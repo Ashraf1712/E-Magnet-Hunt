@@ -173,10 +173,16 @@ public class BoardDataDrawer : Editor
 
             foreach(var searchWord in GameDataInstance.SearchWords)
             {
-                var errorCounter = Regex.Matches(searchWord.word, @"[a-z]").Count;
-                if (errorCounter > 0)
+                var errorCounterWord = Regex.Matches(searchWord.word, @"[a-z]").Count;
+                var errorCounterQuestion = Regex.Matches(searchWord.questions, @"[a-z]").Count;
+
+                if (errorCounterWord > 0)
                 {
                     searchWord.word = searchWord.word.ToUpper();
+                }
+                if(errorCounterQuestion > 0)
+                {
+                    searchWord.questions = searchWord.questions.ToUpper();
                 }
             }
         }

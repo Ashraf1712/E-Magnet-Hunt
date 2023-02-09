@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class NextRoom : MonoBehaviour
 {
     public string roomName;
+    public ToTheNextScene clickScene;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -17,7 +19,8 @@ public class NextRoom : MonoBehaviour
             {
                 if(hit.collider.gameObject.name == "KeyImage")
                 {
-                    SceneManager.LoadScene(roomName);
+                    clickScene.SceneName = roomName;
+                    clickScene.onClick();
                 }
             }
         }
