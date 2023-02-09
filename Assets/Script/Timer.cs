@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Timer : MonoBehaviour
     private float timeRemaining; // The time remaining
     [Header("Please Ignore")]
     public Text timerText; // The UI text component to display the timer
+
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class Timer : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timerText.text = string.Format("{00:00}:{01:00}", 0, 0);
+            HealthBar.currentHealth = 0;
         }
     }
 }
