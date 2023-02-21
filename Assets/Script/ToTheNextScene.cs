@@ -28,4 +28,9 @@ public class ToTheNextScene : MonoBehaviour
     #endif
         Application.Quit();
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
