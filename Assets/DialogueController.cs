@@ -67,6 +67,8 @@ public class DialogueController : MonoBehaviour
     {
         if(index < sentences.Length - 1)
         {
+            AnimatorHear hear = GameObject.FindObjectOfType<AnimatorHear>();
+            hear.ClickMe();
             index++;
             DialogueText.text = string.Empty;
             StartCoroutine(WriteSentence());

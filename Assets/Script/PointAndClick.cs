@@ -17,7 +17,6 @@ public class PointAndClick : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == RoomGameObject.gameObject.name)
                 {
-                    //SceneManager.LoadScene(gameRoomSceneName);
                     clickScene.SceneName = gameRoomSceneName;
                     clickScene.onClick();
                 }

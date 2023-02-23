@@ -2,28 +2,18 @@ using UnityEngine;
 using UnityEngine.UI;
 public class QuestionButton : MonoBehaviour
 {
-    public GameObject fairiesSwirl;
-
-    [Header("Keys Component")]
-    public GameObject keySwirl;
-    public BoxCollider2D keyCollider;
-
-    public GameObject enemySprite;
-    public Sprite enemyDie;
+    [Header("Animator")]
+    public Animator _playerAnim;
+    public Animator _enemyAnim;
+    public Animator _fairyAnim;
+    public Animator _keysAnim;
 
     public void correctAnswer()
     {
-        fairiesSwirl.SetActive(false);
-        keySwirl.SetActive(false);
-        keyCollider.enabled = true;
-        if(enemySprite.GetComponent<Image>() != null)
-        {
-            enemySprite.GetComponent<Image>().sprite = enemyDie;
-        }
-        else
-        {
-            enemySprite.GetComponent<SpriteRenderer>().sprite = enemyDie;
-        }
+        _playerAnim.SetTrigger("Attack");
+        _enemyAnim.SetTrigger("EnemyDie");
+        _fairyAnim.SetTrigger("FairiesDone");
+        _keysAnim.SetTrigger("KeysDone");
     }
 
     public void wrongAnswer()

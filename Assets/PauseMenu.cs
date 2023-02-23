@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void BackToMenu()
     {
         PauseMenuUI.SetActive(false);
+        HealthBar.currentHealth = 3;
         Time.timeScale = 1f;
         GameIsPause = false;
         backToMenu.SceneName = "MainMenu";
