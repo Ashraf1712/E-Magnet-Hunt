@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPause = false;
-
     public GameObject PauseMenuUI;
     public ToTheNextScene backToMenu;
 

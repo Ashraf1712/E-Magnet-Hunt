@@ -5,24 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class NextRoom : MonoBehaviour
 {
-    public string roomName;
-    public ToTheNextScene clickScene;
-
-    private void Update()
+    public string toTheNextRoom;
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-
-            if (hit.collider != null)
-            {
-                if(hit.collider.gameObject.name == "KeyImage")
-                {
-                    clickScene.SceneName = roomName;
-                    clickScene.onClick();
-                }
-            }
-        }
+        gameObject.SetActive(false);
     }
+
+    public void ClaimKey()
+    {
+        ToTheNextScene levelChanger = FindObjectOfType<ToTheNextScene>();
+        levelChanger.SceneName= toTheNextRoom;
+        levelChanger.onClick();
+    }
+
 }
