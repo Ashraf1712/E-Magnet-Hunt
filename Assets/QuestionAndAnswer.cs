@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestionManager : MonoBehaviour
+public class QuestionAndAnswer : MonoBehaviour
 {
     [Header("Question And Answer Component")]
     [SerializeField] private string questionName;

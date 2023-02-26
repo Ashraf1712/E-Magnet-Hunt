@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     public GameObject closedSafe;
     public GameObject openedSafe;
     public Timer timer;
+    public Animator _fairies;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class InputController : MonoBehaviour
             closedSafe.SetActive(false);
             openedSafe.SetActive(true);
             timer.stopTimer = true;
+            _fairies.SetTrigger("FairiesDone");
         }
         else
         {

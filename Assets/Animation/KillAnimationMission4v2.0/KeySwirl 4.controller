@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8aaf3a7a0c8e05e40a56fdac8a6325db, type: 2}
+  m_Motion: {fileID: 7400000, guid: ea223e77d93da324c8b7942b5b18faaa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -33,7 +33,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KeySwirl 2
+  m_Name: KeySwirl 4
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: KeysDone
@@ -41,7 +41,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -75,7 +75,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8efa8b2af78279f44984347debddf417, type: 2}
+  m_Motion: {fileID: 7400000, guid: e778d246d3c450e419c400fa6c52454b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
