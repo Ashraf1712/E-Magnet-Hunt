@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 1852524556080381694}
   - component: {fileID: 1852524556080381695}
   - component: {fileID: 1852524556080381692}
+  - component: {fileID: 7399829094724150517}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -161,8 +162,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputCheck, Assembly-CSharp
-        m_MethodName: CheckInput
+        m_TargetAssemblyTypeName: ToTheNextScene, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7399829094724150517}
+        m_TargetAssemblyTypeName: ToTheNextScene, Assembly-CSharp
+        m_MethodName: playSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -188,6 +201,18 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: cb1fee516d444164abc17d4b2050d4c2, type: 3}
   - {fileID: 21300000, guid: bf625ae84f769384fb0cd1cc52d14971, type: 3}
+--- !u!114 &7399829094724150517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852524556080381681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5de123cb7f4cd429cdb3b7c8006430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852524556984426959
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlaySoundOnStart : MonoBehaviour
 {
-    [SerializeField] private AudioClip _clip;
-    void Start()
+    public void playSound()
     {
-        AudioManager.instance.PlaySound(_clip);
+        AudioManager.instance.playCurrentSound();
     }
 }

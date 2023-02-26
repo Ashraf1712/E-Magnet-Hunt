@@ -5,7 +5,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-
     [SerializeField] private AudioSource audioSource,sfxSource;
 
 
@@ -26,6 +25,8 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.clip = clip;
     }
+
+    public void playCurrentSound() { sfxSource.Play(); }
 
     public void ChangeMasterVolume(float value)
     {

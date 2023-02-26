@@ -6,21 +6,27 @@ using UnityEngine.UI;
 public class VolumeSlider : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
-    private static float volumeSlider = 0.5f;
-    private void Awake()
-    {
-        _slider.value = volumeSlider;
-    }
+
     void Start()
     {
-        AudioManager.instance.ChangeMasterVolume(_slider.value);
+        float savedValue = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
+        _slider.value = savedValue;
+        AudioManager.instance.ChangeMasterVolume(savedValue);
+
         _slider.onValueChanged.AddListener(val =>
         {
-            volumeSlider = val;
+            PlayerPrefs.SetFloat("MasterVolume", val);
             AudioManager.instance.ChangeMasterVolume(val);
+        });
+
+        // Set the initial volume level
+        if (savedValue != _slider.value)
+        {
+            _slider.value = savedValue;
+            AudioManager.instance.ChangeMasterVolume(savedValue);
         }
-        ); 
     }
+
 
 
 }
