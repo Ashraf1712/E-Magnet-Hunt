@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     [SerializeField] GameObject CongratulationPrefabs;
+    private bool congratsSoundPlayed = false;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -14,7 +16,7 @@ public class Key : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject.name == "KeyImage")
+                if (hit.collider.gameObject.name == "KeyImage" && !congratsSoundPlayed)
                 {
                     AudioManager audioManager = FindObjectOfType<AudioManager>();
                     if (audioManager != null)
@@ -22,6 +24,7 @@ public class Key : MonoBehaviour
                         audioManager.playCongratsSound();
                     }
                     CongratulationPrefabs.SetActive(true);
+                    congratsSoundPlayed = true;
                 }
             }
         }

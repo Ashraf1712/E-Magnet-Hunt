@@ -1990,6 +1990,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6964793876420720384, guid: 9d1dbf9d7040e4541a9b6a91f9e48b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8422251313819524596, guid: 9d1dbf9d7040e4541a9b6a91f9e48b7f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2746,6 +2750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CongratulationPrefabs: {fileID: 1752024896}
+  fuseCollider: {fileID: 1298378243}
 --- !u!224 &7256282143951261120
 RectTransform:
   m_ObjectHideFlags: 0

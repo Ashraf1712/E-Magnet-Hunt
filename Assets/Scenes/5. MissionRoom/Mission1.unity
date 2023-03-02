@@ -536,6 +536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1103166821785596782, guid: 300fa20fe87814445877d6ea8ea038d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 300fa20fe87814445877d6ea8ea038d4, type: 3}
 --- !u!114 &766818679 stripped
@@ -891,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2672521970101822666, guid: d398b2b364e98c1469b8388370bd0f30, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -71.00021
+      value: -71.000244
       objectReference: {fileID: 0}
     - target: {fileID: 2672521970101822666, guid: d398b2b364e98c1469b8388370bd0f30, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1865,6 +1869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CongratulationPrefabs: {fileID: 940189875}
+  keyCollider: {fileID: 2054799147}
 --- !u!1001 &3478036446581367529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1872,6 +1877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 801356053967279574, guid: 9d1dbf9d7040e4541a9b6a91f9e48b7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 801356053967279574, guid: 9d1dbf9d7040e4541a9b6a91f9e48b7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6017684867582427960, guid: 9d1dbf9d7040e4541a9b6a91f9e48b7f, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
