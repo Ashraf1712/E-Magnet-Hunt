@@ -16,6 +16,11 @@ public class Key : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "KeyImage")
                 {
+                    AudioManager audioManager = FindObjectOfType<AudioManager>();
+                    if (audioManager != null)
+                    {
+                        audioManager.playCongratsSound();
+                    }
                     CongratulationPrefabs.SetActive(true);
                 }
             }

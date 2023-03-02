@@ -16,6 +16,11 @@ public class Fuse : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "Fuse")
                 {
+                    AudioManager audioManager = FindObjectOfType<AudioManager>();
+                    if (audioManager != null)
+                    {
+                        audioManager.playCongratsSound();
+                    }
                     CongratulationPrefabs.SetActive(true);
                 }
             }

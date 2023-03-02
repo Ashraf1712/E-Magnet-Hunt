@@ -6,9 +6,8 @@ public class AudioManager : MonoBehaviour
 {
 
     public static AudioManager instance;
-    [SerializeField] private AudioSource audioSource,sfxSource;
+    [SerializeField] private AudioSource audioSource,sfxSource,congratulationSource;
     [SerializeField] private AudioData soundScriptableObject;
-
 
     private void Awake()
     {
@@ -30,7 +29,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void playCurrentSound() { sfxSource.Play(); }
-
+    public void playCongratsSound() { congratulationSource.Play(); }
     public void ChangeMasterVolume(float value)
     {
         soundScriptableObject.volume = value;
