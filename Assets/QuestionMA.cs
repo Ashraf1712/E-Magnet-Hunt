@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,13 +30,27 @@ public class QuestionMA : MonoBehaviour
         for (int i = 0; i < answerToggles.Length; i++)
         {
             selectedAnswers[i] = answerToggles[i].isOn;
-            bool isCorrect = Array.IndexOf(correctAnswers, answerToggles[i].GetComponentInChildren<Text>().text) != -1;
+
+            // Get the selected answer
+            string selectedAnswer = answerToggles[i].GetComponentInChildren<TextMeshProUGUI>().text.ToUpper();
+
+            // Check if the selected answer is correct
+            bool isCorrect = false;
+            foreach (string correctAnswer in correctAnswers)
+            {
+                if (selectedAnswer == correctAnswer.ToUpper())
+                {
+                    isCorrect = true;
+                    break;
+                }
+            }
 
             if (selectedAnswers[i] != isCorrect)
             {
                 allCorrect = false;
             }
         }
+
 
         if (allCorrect)
         {

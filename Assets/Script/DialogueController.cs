@@ -14,6 +14,7 @@ public class DialogueController : MonoBehaviour
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
     [SerializeField] private float timer;
     private bool isTimerDone = false;
+    [SerializeField] private ToTheNextScene nextScene;
     void Start()
     {
         DialogueText.text = string.Empty;
@@ -72,6 +73,10 @@ public class DialogueController : MonoBehaviour
             index++;
             DialogueText.text = string.Empty;
             StartCoroutine(WriteSentence());
+        }
+        else
+        {
+            nextScene.onClick();
         }
     }
 

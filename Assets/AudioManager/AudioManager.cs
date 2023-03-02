@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+
     public static AudioManager instance;
     [SerializeField] private AudioSource audioSource,sfxSource;
+    [SerializeField] private AudioData soundScriptableObject;
 
 
     private void Awake()
@@ -13,6 +15,7 @@ public class AudioManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            AudioListener.volume = soundScriptableObject.volume;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -30,6 +33,7 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMasterVolume(float value)
     {
+        soundScriptableObject.volume = value;
         AudioListener.volume = value;
     }
     public void ChangeBackgroundMusic(AudioClip clip)
