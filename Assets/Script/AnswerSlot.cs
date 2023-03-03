@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,28 +12,17 @@ public class AnswerSlot : MonoBehaviour, IDropHandler
 
     private void Update()
     {
-        if(transform.childCount == 0)
+        if (transform.childCount == 0)
         {
             correct = false;
         }
     }
-
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount == 0)
-        {
-            GameObject dropped = eventData.pointerDrag;
-            DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
-            draggableItem.parentAfterDrag = transform;
-            if (draggableItem.answerID == answerSlotID)
-            {
-                correct = true;
-            }
-            else
-            {
-                correct = false;
-            }
+        if(eventData.pointerDrag != null) {
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            eventData.pointerDrag.transform.SetParent(transform, true);
         }
-
     }
+
 }

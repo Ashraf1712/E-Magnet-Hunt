@@ -1,36 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
-    public Image image;
     public int answerID;
     public Transform backPoint;
-    [HideInInspector] public Transform parentAfterDrag;
-
+    [SerializeField] private Canvas canvas;
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        parentAfterDrag = transform.parent;
+        canvasGroup.blocksRaycasts = false;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
-        image.raycastTarget = false;
     }
-
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (eventData.pointerEnter.CompareTag("AnswerSlot"))
+        if (!eventData.pointerEnter.CompareTag("AnswerSlot"))
         {
-            transform.SetParent(parentAfterDrag);
+            transform.position = backPoint.position;
         }
-        transform.position = backPoint.position;
-        image.raycastTarget = true;
+        else {
+            AnswerSlot answer = eventData.pointerEnter.GetComponent<AnswerSlot>();
+            if (answerID == answer.answerSlotID)
+            {
+                answer.correct = true;
+            }
+            else
+            {
+                answer.correct = false;
+            }
+        }
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        
     }
 }
