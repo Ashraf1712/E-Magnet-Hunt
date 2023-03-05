@@ -842,7 +842,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6769574193424326769}
-  - component: {fileID: 6769574193424326768}
   m_Layer: 5
   m_Name: MCQ
   m_TagString: Untagged
@@ -874,23 +873,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6769574193424326768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769574193424326770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ce7c7d99d1def458dd0d1971592df5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  question: 'Which of the following is the reason why the magnetic flux through the
-    bracelet is changing? Students can test the simulation to answer this problem. '
-  questionText: {fileID: 6769574194476785247}
-  answerToggles: []
-  correctAnswers: []
 --- !u!1 &6769574193953816490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2630ea4916c6a21499e730a71681d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedAnswer: 0
+  qb: {fileID: 0}
+  MCQGameobject: {fileID: 6769574193424326770}
 --- !u!1 &6769574194100182449
 GameObject:
   m_ObjectHideFlags: 0

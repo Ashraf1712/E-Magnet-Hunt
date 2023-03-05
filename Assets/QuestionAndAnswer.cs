@@ -13,6 +13,9 @@ public class QuestionAndAnswer : MonoBehaviour
     [Header("Input Field Component")]
     [SerializeField] private InputField inputField;
     [SerializeField] private Text questionText;
+
+    [Header("Animator")]
+    public QuestionButton qb;
     private bool isCorrect = false;
 
     private void Start()
@@ -20,7 +23,7 @@ public class QuestionAndAnswer : MonoBehaviour
         questionText.text = questionName;
         inputField.onValueChanged.AddListener(val =>
         {
-            if (val.ToUpper() == answer.ToUpper())
+            if (val.ToUpper().Trim() == answer.ToUpper().Trim())
             {
                 isCorrect = true;
             }
@@ -29,6 +32,19 @@ public class QuestionAndAnswer : MonoBehaviour
                 isCorrect = false;
             }
         });
+    }
+
+    public void correctAnswer() 
+    { 
+        if(isCorrect)
+        {
+            qb.correctAnswer();
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            qb.wrongAnswer();
+        }
     }
 
 }

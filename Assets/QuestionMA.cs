@@ -15,6 +15,8 @@ public class QuestionMA : MonoBehaviour
     public Toggle[] answerToggles;
     public string[] correctAnswers;
 
+    [Header("Animator")]
+    public QuestionButton qb;
     private bool[] selectedAnswers;
 
     void Start()
@@ -54,11 +56,12 @@ public class QuestionMA : MonoBehaviour
 
         if (allCorrect)
         {
-            Debug.Log("Congratulations! You answered correctly.");
+            qb.correctAnswer();
+            this.gameObject.SetActive(false);
         }
         else
         {
-            Debug.Log("Sorry, your answer is incorrect.");
+            qb.wrongAnswer();
         }
     }
 }
