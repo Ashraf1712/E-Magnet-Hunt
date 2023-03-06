@@ -7,10 +7,6 @@ using UnityEngine.UI;
 
 public class QuestionMA : MonoBehaviour
 {
-    [Header("Question Component")]
-    public string question;
-    public Text questionText;
-
     [Header("Answer Component")]
     public Toggle[] answerToggles;
     public string[] correctAnswers;
@@ -21,7 +17,6 @@ public class QuestionMA : MonoBehaviour
 
     void Start()
     {
-        questionText.text = question;
         selectedAnswers = new bool[answerToggles.Length];
     }
 
