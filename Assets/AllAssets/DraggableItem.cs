@@ -10,6 +10,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     public int answerID;
     public Transform backPoint;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject currentGameObject;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private void Awake()
@@ -20,7 +21,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
-        transform.SetParent(transform.root);
+        transform.SetParent(currentGameObject.transform);
         transform.SetAsLastSibling();
     }
     public void OnDrag(PointerEventData eventData)

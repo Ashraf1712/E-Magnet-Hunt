@@ -16,7 +16,7 @@ public class Key : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject.name == "KeyImage" && !congratsSoundPlayed)
+                if (hit.collider.gameObject.name == "Key" && !congratsSoundPlayed)
                 {
                     AudioManager audioManager = FindObjectOfType<AudioManager>();
                     if (audioManager != null)

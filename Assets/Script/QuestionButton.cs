@@ -14,6 +14,8 @@ public class QuestionButton : MonoBehaviour
 
     public void correctAnswer()
     {
+        HintChanger hint = FindObjectOfType<HintChanger>();
+        if (hint != null) hint.changeHint();
         _playerAnim.SetTrigger("Attack");
         //Check Question Number
         if(question > 0)
@@ -25,7 +27,7 @@ public class QuestionButton : MonoBehaviour
             {
                 _enemyAnim.SetTrigger("EnemyDie");
                 _fairyAnim.SetTrigger("FairiesDone");
-                _keysAnim.SetTrigger("KeysDone");
+                _keysAnim.SetTrigger("openChest");
             }
         }
     }

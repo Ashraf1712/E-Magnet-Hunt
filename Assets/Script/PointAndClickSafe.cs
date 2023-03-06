@@ -19,7 +19,9 @@ public class PointAndClickSafe : MonoBehaviour
             if (hit.collider != null)
             {
                 if (hit.collider.gameObject.name == closedSafeName.name)
+                {
                     closedSafeQuestion.SetActive(true);
+                }
 
             }
         }

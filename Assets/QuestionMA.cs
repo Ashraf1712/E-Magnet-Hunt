@@ -34,13 +34,13 @@ public class QuestionMA : MonoBehaviour
             selectedAnswers[i] = answerToggles[i].isOn;
 
             // Get the selected answer
-            string selectedAnswer = answerToggles[i].GetComponentInChildren<TextMeshProUGUI>().text.ToUpper();
+            string selectedAnswer = answerToggles[i].GetComponentInChildren<TextMeshProUGUI>().text.ToUpper().Trim();
 
             // Check if the selected answer is correct
             bool isCorrect = false;
             foreach (string correctAnswer in correctAnswers)
             {
-                if (selectedAnswer == correctAnswer.ToUpper())
+                if (selectedAnswer == correctAnswer.ToUpper().Trim())
                 {
                     isCorrect = true;
                     break;

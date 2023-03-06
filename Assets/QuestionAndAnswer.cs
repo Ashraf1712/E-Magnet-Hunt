@@ -1,18 +1,19 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QuestionAndAnswer : MonoBehaviour
 {
-    [Header("Question And Answer Component")]
-    [SerializeField] private string questionName;
-    [SerializeField] private string answer;
+    [Header("Answer")]
+    [SerializeField] private string[] acceptableAnswer;
 
     [Header("Input Field Component")]
-    [SerializeField] private InputField inputField;
-    [SerializeField] private Text questionText;
+    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private Button interactableButton;
+
 
     [Header("Animator")]
     public QuestionButton qb;
@@ -20,18 +21,22 @@ public class QuestionAndAnswer : MonoBehaviour
 
     private void Start()
     {
-        questionText.text = questionName;
-        inputField.onValueChanged.AddListener(val =>
+        foreach (var answer in acceptableAnswer)
         {
-            if (val.ToUpper().Trim() == answer.ToUpper().Trim())
+            inputField.onValueChanged.AddListener(val =>
             {
-                isCorrect = true;
-            }
-            else
-            {
-                isCorrect = false;
-            }
-        });
+                if (string.IsNullOrEmpty(inputField.text))
+                    interactableButton.interactable = false;
+                else 
+                    interactableButton.interactable = true;
+                if (val.ToUpper().Trim() == answer.ToUpper().Trim())
+                {
+                    isCorrect = true;
+                    return;
+                }
+            });
+        }
+        isCorrect= false;
     }
 
     public void correctAnswer() 

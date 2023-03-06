@@ -28,7 +28,6 @@ public class RadioButtonSystem : MonoBehaviour
     public void Submit()
     {
         Toggle toggle = toggleGroup.ActiveToggles().FirstOrDefault();
-        Debug.Log(toggle.GetComponentInChildren<TextMeshProUGUI>().text.ToString()[0]);
         if(toggle.GetComponentInChildren<TextMeshProUGUI>().text.ToString()[0] == selectedAnswer.ToString()[0]) {
             qb.correctAnswer();
         }
