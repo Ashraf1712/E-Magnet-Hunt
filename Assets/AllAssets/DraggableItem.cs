@@ -13,6 +13,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     [SerializeField] private GameObject currentGameObject;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    public bool onSlot = false;
+    public bool correct = false;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -23,6 +26,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
         canvasGroup.blocksRaycasts = false;
         transform.SetParent(currentGameObject.transform);
         transform.SetAsLastSibling();
+        onSlot = false;
+        correct = false;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -36,13 +41,14 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
         }
         else {
             AnswerSlot answer = eventData.pointerEnter.GetComponent<AnswerSlot>();
-            if (answerID == answer.answerSlotID)
+            onSlot = true;
+            if (answerID == answer.answerSlotID && onSlot)
             {
-                answer.correct = true;
+                correct = true;
             }
             else
             {
-                answer.correct = false;
+                correct = false;
             }
         }
         canvasGroup.blocksRaycasts = true;

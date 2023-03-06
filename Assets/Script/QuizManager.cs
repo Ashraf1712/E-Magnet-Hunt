@@ -14,7 +14,7 @@ public class QuizManager : MonoBehaviour
         allCorrect = true;
         for (int i = 0; i < answer.Length; i++)
         {
-            if (!answer[i].gameObject.GetComponent<AnswerSlot>().correct)
+            if (!answer[i].gameObject.GetComponent<DraggableItem>().correct && answer[i].GetComponent<DraggableItem>().onSlot)
             {
                 allCorrect = false;
                 break;
@@ -26,7 +26,7 @@ public class QuizManager : MonoBehaviour
     {
         for (int i = 0; i < answer.Length; i++)
         {
-            if (answer[i].gameObject.GetComponent<Transform>().childCount == 0)
+            if (!answer[i].gameObject.GetComponent<DraggableItem>().onSlot)
             {
                 return;
             }

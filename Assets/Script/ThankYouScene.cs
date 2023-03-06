@@ -10,7 +10,7 @@ public class ThankYouScene : MonoBehaviour
 
     private void Update()
     {
-        if (thankYou.GetComponent<AnswerSlot>().correct)
+        if (thankYou.GetComponent<AnswerSlotOne>().correct)
         {
             clickScene.onClick();
             clickScene.SceneName = "ThankYouScene";
