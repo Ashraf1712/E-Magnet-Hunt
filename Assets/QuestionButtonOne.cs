@@ -6,6 +6,7 @@ public class QuestionButtonOne : MonoBehaviour
 {
     [Header("Animator")]
     public Animator _nextQuestion;
+    public Animator _codeAnim;
     public BoxCollider2D safeBoxCollider;
 
     public float question;
@@ -18,6 +19,7 @@ public class QuestionButtonOne : MonoBehaviour
         {
             question -= 1;
             _nextQuestion.SetTrigger("NextQuestion");
+            _codeAnim.SetTrigger("code");
             if (question == 0)
             {
                 safeBoxCollider.enabled = true;

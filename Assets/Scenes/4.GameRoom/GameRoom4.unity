@@ -204,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2672521970101822666, guid: d398b2b364e98c1469b8388370bd0f30, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -67.9997
+      value: -67.99971
       objectReference: {fileID: 0}
     - target: {fileID: 2672521970101822666, guid: d398b2b364e98c1469b8388370bd0f30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -279,6 +279,10 @@ PrefabInstance:
     - target: {fileID: 143715072784274851, guid: 36fbfeba0f561c149afa350557d964eb, type: 3}
       propertyPath: m_Name
       value: LevelChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 143715072784274851, guid: 36fbfeba0f561c149afa350557d964eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36fbfeba0f561c149afa350557d964eb, type: 3}
@@ -769,6 +773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7130695997484409608, guid: 7755373fc457c744a84acb5c1e44bcc0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7130695997484409609, guid: 7755373fc457c744a84acb5c1e44bcc0, type: 3}
       propertyPath: clickScene
       value: 
@@ -779,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 542050278}
     - target: {fileID: 7130695997484409609, guid: 7755373fc457c744a84acb5c1e44bcc0, type: 3}
       propertyPath: gameRoomSceneName
-      value: Mission4
+      value: GameRoom6
       objectReference: {fileID: 0}
     - target: {fileID: 7130695997484409610, guid: 7755373fc457c744a84acb5c1e44bcc0, type: 3}
       propertyPath: m_RootOrder
