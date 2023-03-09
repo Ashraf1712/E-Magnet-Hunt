@@ -16,6 +16,12 @@ public class OpenFeedback : MonoBehaviour
     {
         WindowsPrefabs.localScale = Vector3.zero;
         yield return new WaitForSeconds(0.1f);
-        WindowsPrefabs.DOScale(1.5f, 1.5f).SetEase(Ease.InQuint);
+        WindowsPrefabs.DOScale(1.5f, 1f).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            WindowsPrefabs.DOScale(1.6f, 0.1f).SetEase(Ease.Linear).OnComplete(() =>
+            {
+                WindowsPrefabs.DOScale(1.5f, 0.1f).SetEase(Ease.Linear);
+            });
+        });
     }
 }

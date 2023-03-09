@@ -9,7 +9,7 @@ public class CloseFeedback : MonoBehaviour
     [SerializeField] RectTransform CongratulationPrefabs;
     public void closeFeedback()
     {
-        WindowPrefabs.DOScale(0f, 1.5f).SetEase(Ease.OutQuint).OnComplete(() =>
+        WindowPrefabs.DOScale(0f, 1f).SetEase(Ease.OutQuint).OnComplete(() =>
         {
             CongratulationPrefabs.gameObject.SetActive(false);
         });

@@ -40,6 +40,14 @@ public class LastMissionAnimation : MonoBehaviour
     {
         questions[_count].transform.DOScale(0, 0f);
         yield return new WaitForSeconds(0.1f);
-        questions[_count].transform.DOScale(originalScale, transitionTime).SetEase(transitionType);
+        questions[_count].transform.DOScale(originalScale, transitionTime).SetEase(transitionType).OnComplete(() =>
+        {
+            questions[_count].transform.DOScale(new Vector3(originalScale.x + 0.1f, originalScale.y + 0.1f, 1f), 0.1f).SetEase(transitionType).OnComplete(() =>
+            {
+                questions[_count].transform.DOScale(originalScale, 0.1f).SetEase(transitionType);
+            });
+        });
+        
+
     }
 }
