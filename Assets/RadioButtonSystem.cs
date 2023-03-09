@@ -11,6 +11,7 @@ public enum Answer
     B,
     C,
     D,
+    E,
 };
 public class RadioButtonSystem : MonoBehaviour
 {
