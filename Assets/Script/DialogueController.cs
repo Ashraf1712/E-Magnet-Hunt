@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.Profiling.Editor;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour

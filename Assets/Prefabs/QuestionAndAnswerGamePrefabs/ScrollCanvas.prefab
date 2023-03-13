@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 3083656072016179507}
   - component: {fileID: 3083656072016179508}
   - component: {fileID: 3083656072016179505}
+  - component: {fileID: 4065358093421992307}
+  - component: {fileID: 8909293840677469882}
   m_Layer: 5
   m_Name: ScrollButton
   m_TagString: Untagged
@@ -250,6 +252,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8909293840677469882}
+        m_TargetAssemblyTypeName: PlaySoundOnStart, Assembly-CSharp
+        m_MethodName: playSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3083656072016179505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +277,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollPrefabs: {fileID: 3083656072013380428}
+--- !u!114 &4065358093421992307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083656072016179510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
+--- !u!114 &8909293840677469882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083656072016179510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5de123cb7f4cd429cdb3b7c8006430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3083656072871134336
 GameObject:
   m_ObjectHideFlags: 0
